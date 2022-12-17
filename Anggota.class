@@ -1,0 +1,4 @@
+public interface Anggota {
+    void inputanggota();
+    void outputanggota();
+}
