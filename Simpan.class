@@ -1,0 +1,35 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.util.Scanner;
+
+public class simpan extends Koperasi {
+    public int jumlahsimpan;
+    public int jumlahambil;
+    public String tglsimpan;
+    public String tglambil;
+    Scanner input;
+
+    public simpan() {
+        this.input = new Scanner(System.in);
+    }
+
+    public void nyimpan() {
+        System.out.println("-----SIMPAN----");
+        System.out.println("Masukkan Tanggal : ");
+        this.tglsimpan = this.input.nextLine();
+        System.out.println("Masukkan Jumlah Simpanan : ");
+        this.jumlahsimpan = this.input.nextInt();
+        System.out.println("Berhasil Menyimpan");
+    }
+
+    public void ngambil() {
+        System.out.println("-----AMBIL------");
+        System.out.println("Masukkan Tanggal : ");
+        this.tglambil = this.input.nextLine();
+        System.out.println("Masukkan Jumlah Pengambilan : ");
+        this.jumlahambil = this.input.nextInt();
+    }
+}
