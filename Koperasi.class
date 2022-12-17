@@ -1,0 +1,91 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class Koperasi {
+    protected String nama;
+    protected int simp;
+    protected int menu;
+    protected String alamat;
+    protected int telpon;
+    protected String user;
+    protected String us;
+    protected int pass;
+    protected int ps;
+
+    public Koperasi() {
+    }
+
+    public int getSimp() {
+        return this.simp;
+    }
+
+    public void setSimp(int simp) {
+        this.simp = simp;
+    }
+
+    public int getMenu() {
+        return this.menu;
+    }
+
+    public void setMenu(int menu) {
+        this.menu = menu;
+    }
+
+    public String getNama() {
+        return this.nama;
+    }
+
+    public void setNama(String s) {
+        this.nama = this.nama;
+    }
+
+    public String getAlamat() {
+        return this.alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public int getTelpon() {
+        return this.telpon;
+    }
+
+    public void setTelpon(int telpon) {
+        this.telpon = telpon;
+    }
+
+    public String getUser() {
+        return this.user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getUs() {
+        return this.us;
+    }
+
+    public void setUs(String us) {
+        this.us = us;
+    }
+
+    public int getPass() {
+        return this.pass;
+    }
+
+    public void setPass(int pass) {
+        this.pass = pass;
+    }
+
+    public int getPs() {
+        return this.ps;
+    }
+
+    public void setPs(int ps) {
+        this.ps = ps;
+    }
+}
