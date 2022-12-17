@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Ngansur extends Angsuran{
+    public String tglangsur;
+    public int angsurke;
+    public int jumangsur;
+    public int totalangsur;
+
+    Scanner input = new Scanner(System.in);
+    @Override
+    public void bayarangsuran() {
+        System.out.println("-----ANGSURAN-----");
+        System.out.println("Masukkan tanggal : ");
+        tglangsur = input.nextLine();
+        System.out.println("Angsuran ke-");
+        angsurke=input.nextInt();
+        System.out.println("Masukkan Jumlah Angsuran : ");
+        jumangsur = input.nextInt();
+    }
+    public void tampilangsuran(){
+        System.out.println("------------------------");
+        System.out.println("|        ANGSURAN      |");
+        System.out.println("------------------------");
+        System.out.println("Tanggal         : "+tglangsur);
+        System.out.println("Angsuran ke     : "+angsurke);
+        System.out.println("Jumlah Angsuran : "+jumangsur);
+    }
+}
