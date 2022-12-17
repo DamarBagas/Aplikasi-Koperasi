@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class DataAng implements Anggota{
+    Scanner in = new Scanner(System.in);
+    String ttl,telpang,namaang,noang,almtang;
+    @Override
+    public void inputanggota() {
+        System.out.println("==============================================");
+        System.out.println("|                  PENDAFTARAN               |");
+        System.out.println("==============================================");
+        System.out.print("Masukkan No Anggota   : ");
+        noang = in.nextLine();
+        System.out.print("Masukkan Nama         : ");
+        namaang = in.nextLine();
+        System.out.print("Masukkan TTL          : ");
+        ttl=in.nextLine();
+        System.out.print("Masukkan No. Telpon   : ");
+        telpang=in.nextLine();
+        System.out.print("Masukkan Alamat       : ");
+        almtang = in.nextLine();
+        System.out.println("==============================================");
+    }
+
+    @Override
+    public void outputanggota() {
+        System.out.println("==============================================");
+        System.out.println("|                DATA ANGGOTA                |");
+        System.out.println("==============================================");
+        System.out.println("Nomor Anggota         : "+noang);
+        System.out.println("Nama Anggota          : "+namaang);
+        System.out.println("Tempat Tanggal Lahir  : "+ttl);
+        System.out.println("No. Telpon            : "+telpang);
+        System.out.println("Alamat                : "+almtang);
+        System.out.println("==============================================");
+
+    }
+}
