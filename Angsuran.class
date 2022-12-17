@@ -1,0 +1,4 @@
+abstract public class Angsuran {
+    public abstract void bayarangsuran();
+
+}
