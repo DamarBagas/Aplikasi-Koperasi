@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class Ngansur extends Angsuran{
     public String tglangsur;
@@ -18,10 +19,28 @@ public class Ngansur extends Angsuran{
     }
     public void tampilangsuran(){
         System.out.println("------------------------");
-        System.out.println("|        ANGSURAN      |");
+        System.out.println("|    DATA ANGSURAN     |");
         System.out.println("------------------------");
         System.out.println("Tanggal         : "+tglangsur);
         System.out.println("Angsuran ke     : "+angsurke);
         System.out.println("Jumlah Angsuran : "+jumangsur);
+        System.out.println("------------------------");
+    }
+    public void cetakangsuran(){
+        java.io.File file = new java.io.File("Angsuran.txt");
+        try {
+            java.io.PrintWriter output = new java.io.PrintWriter(file);
+        output.println("------------------------");
+            output.println("|    DATA ANGSURAN     |");
+            output.println("------------------------");
+            output.println("Tanggal         : "+tglangsur);
+            output.println("Angsuran ke     : "+angsurke);
+            output.println("Jumlah Angsuran : "+jumangsur);
+            output.println("------------------------");
+            output.close();
+    }
+        catch (FileNotFoundException e) {
+            System.out.println("Terjadi Kesalahan");
+        }
     }
 }
