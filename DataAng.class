@@ -1,5 +1,7 @@
+
 import java.util.Scanner;
 
+import java.io.FileNotFoundException;
 public class DataAng implements Anggota{
     Scanner in = new Scanner(System.in);
     String ttl,telpang,namaang,noang,almtang;
@@ -19,7 +21,7 @@ public class DataAng implements Anggota{
         System.out.print("Masukkan Alamat       : ");
         almtang = in.nextLine();
         System.out.println("==============================================");
-    }
+    } 
 
     @Override
     public void outputanggota() {
@@ -33,5 +35,24 @@ public class DataAng implements Anggota{
         System.out.println("Alamat                : "+almtang);
         System.out.println("==============================================");
 
+    }
+    public void cetakanggota(){
+        java.io.File file = new java.io.File("dataku.txt");
+        try {
+            java.io.PrintWriter output = new java.io.PrintWriter(file);
+                output.println("==============================================");
+                output.println("|                DATA ANGGOTA                |");
+                output.println("==============================================");
+                output.println("Nomor Anggota          : " + noang);
+                output.println("Nama Anggota           : " + namaang);
+                output.println("Tempat Tanggal Lahir   : " + ttl);
+                output.println("No. Telpon             : " + telpang);
+                output.println("Alamat                 : " + almtang);
+                output.println("==============================================");
+                output.close();
+            }
+        catch (FileNotFoundException e) {
+            System.out.println("Terjadi Kesalahan");
+        }
     }
 }
