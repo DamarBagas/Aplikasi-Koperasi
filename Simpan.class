@@ -3,6 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class simpan extends Koperasi {
@@ -10,6 +11,7 @@ public class simpan extends Koperasi {
     public int jumlahambil;
     public String tglsimpan;
     public String tglambil;
+    public int saldo;
     Scanner input;
 
     public simpan() {
@@ -31,5 +33,41 @@ public class simpan extends Koperasi {
         this.tglambil = this.input.nextLine();
         System.out.println("Masukkan Jumlah Pengambilan : ");
         this.jumlahambil = this.input.nextInt();
+    }
+
+    public void tampilnyimpan(){
+        System.out.println("========================");
+        System.out.println("|     DATA SIMPANAN    |");
+        System.out.println("========================");
+        System.out.println("Tanggal       : "+tglsimpan);
+        System.out.println("Jumlah Simpan : "+jumlahsimpan);
+        System.out.println("========================");
+    }
+
+    public void tampilambil(){
+        System.out.println("========================");
+        System.out.println("|       DATA AMBIL     |");
+        System.out.println("========================");
+        System.out.println("Tanggal       : "+tglambil);
+        System.out.println("Jumlah Ambil  : "+jumlahambil);
+        saldo=jumlahsimpan-jumlahambil;
+        System.out.println("Sisa Saldo    : "+saldo);
+        System.out.println("========================");
+    }
+    public void cetakambil() {
+        java.io.File file = new java.io.File("Ambil.txt");
+        try {
+            java.io.PrintWriter output = new java.io.PrintWriter(file);
+            output.println("========================");
+            output.println("|       DATA AMBIL     |");
+            output.println("========================");
+            output.println("Tanggal       : " + tglambil);
+            output.println("Jumlah Ambil  : " + jumlahambil);
+            output.println("Sisa Saldo    : " + saldo);
+            output.println("========================");
+            output.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Terjadi Kesalahan");
+        }
     }
 }
