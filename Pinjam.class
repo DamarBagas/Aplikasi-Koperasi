@@ -1,20 +1,49 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class pinjam {
+public class pinjam extends Koperasi {
     Scanner input = new Scanner(System.in);
     public String tglpinjam;
     public int jumlahpinjam;
     public String tgltempo;
     public int bunga;
 
-    public void minjam(){
+    public void minjam() {
         System.out.println("-----PINJAM-------");
         System.out.println("Masukkan Tanggal  :");
-        tglpinjam=input.nextLine();
+        tglpinjam = input.nextLine();
         System.out.println("Masukkan Jumlah Pinjam : ");
         jumlahpinjam = input.nextInt();
         System.out.println("Masukkan Bunga : ");
-        bunga=input.nextInt();
+        bunga = input.nextInt();
 
+    }
+
+    public void tampilminjam() {
+        System.out.println("========================");
+        System.out.println("|     DATA PINJAMAN    |");
+        System.out.println("========================");
+        System.out.println("Tanggal       : " + tglpinjam);
+        System.out.println("Jumlah Pinjam : " + jumlahpinjam);
+        System.out.println("Jumlah Bunga  : " + bunga);
+
+    }
+
+    public void cetakpinjam() {
+        java.io.File file = new java.io.File("Pinjam.txt");
+        try {
+            java.io.PrintWriter output = new java.io.PrintWriter(file);
+            output.println("========================");
+            output.println("|     DATA PINJAMAN    |");
+            output.println("========================");
+            output.println("Tanggal       : " + tglpinjam);
+            output.println("Jumlah Pinjam : " + jumlahpinjam);
+            output.println("Jumlah Bunga  : " + bunga);
+            output.println("========================");
+            output.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Terjadi Kesalahan");
+        }
     }
 }
